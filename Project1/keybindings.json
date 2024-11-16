@@ -1,0 +1,8 @@
+// Inserire in questo file i tasti di scelta rapida per eseguire l'override di quelli predefiniti
+[
+    {
+       "key": "ctrl+k",
+       "command": "workbench.action.tasks.runTask",
+       "args": "Esegui Reader con numero di riga"
+    }
+]
