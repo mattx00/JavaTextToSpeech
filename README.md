@@ -3,4 +3,4 @@ In questo progetto verranno raggruppati tutti i contenuti raccolti nel tempo rig
 con specifico focus sul linguaggio `Java`.
 
 ## Opzione 1 
-Il primo progetto propone di utilizzare il file [/JavaTextToSpeech](/project1)
+Il primo progetto propone di utilizzare il file (/project1)
