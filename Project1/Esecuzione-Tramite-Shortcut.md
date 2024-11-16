@@ -41,5 +41,6 @@ contenuto di quelli presenti in questa directory.
 ## Automazione mediante file sh o bat 
 Per andare ad automatizzare il processo, i file .json configurati precedentemente andranno ad invocare uno script .sh o .bat (a seconda del sistema operativo). Pertanto occorre andare a creare un file [script_exec.sh](/Project1/script_exec.sh) o [script_exec.bat](/Project1/script_exec.bat) in cui verranno inseriti i comandi eseguiti al click del shortcut.
 
-
+## Conclusioni
+Se tutto è andato a buon fine, ora posizionando il cursore su una specifica riga di codice di un file `.Java` e cliccando la combinazione `ctrl+k`, verrà invocato il programma che a sua volta invocherà il Reader e si potrà ascoltare l'output enfatizzato.
 
