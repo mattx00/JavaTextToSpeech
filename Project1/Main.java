@@ -6,13 +6,16 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class Main {
+    
     public static String platform;
+    
     public static void main(String[] args) {
+        // Argomenti richiesti: nome file e numero riga di cui ne si vuole sentire la lettura tramite Reader.
         if (args.length < 2) {
             System.out.println("Utilizzo: java Main <Java File> <line n.>");
             return;
         }
-
+        // Invocando il Reader di default del sistema operativo, verifico in quale OS viene eseguito il programma [Windows, Linux, MacOs]
         checkOS();
 
         String filepath = args[0];
@@ -26,13 +29,16 @@ public class Main {
             int counter = 0;
             int lineNo = Integer.parseInt(args[1]);
 
-            // Leggi l'intero file
+            // Lettura dell'intero file 
             while ((line = reader.readLine()) != null) {
+                // Skippo la linea fin quando non raggiungo quella desiderata
                 if (counter == lineNo) {
                     line = line.trim();
+                    // Linea vuota
                     if (line.length() < 1) {
                         System.out.println("");                     
                     }
+                    // linea che inizierà con un commento su linea
                     else if (line.contains("//")) {
                         int commentIndex = line.indexOf("//");
                         String comment = line.substring(commentIndex);
@@ -62,6 +68,7 @@ public class Main {
                     else {
                         String[] words = line.split("((?<=\\W)|(?=\\W))"); 
                         for(String word : words) {
+                            // la linea è contenuta tra doppi apici  (contenuto stringa)
                             if (word.equals("\"")) {
                                 if (isBetweenUppers) {
                                     isBetweenUppers = false;
@@ -96,7 +103,7 @@ public class Main {
         System.out.println(textForReading);
         speak(textForReading);
     }
-
+    // Gestione dell'enfasi sulla lettura delle keyword di linguaggio
     public static String processWord(String word) {
         if (isVisibility(word)) {
             if (word.equals("public")) {
@@ -213,7 +220,7 @@ public class Main {
             return (word.toUpperCase() + ".\n");
         }   
     }
-
+    // Risultato lettura: "Visibilità x", con x = public, private, protected
     private static boolean isVisibility(String word) {
         String [] keywords = { "public", "private", "protected"};
         for (String keyword : keywords) {
@@ -223,7 +230,7 @@ public class Main {
         }     
         return false;
     }
-
+    // Risultato lettura: "Tipo x", con x il tipo analizzato
     private static boolean isType(String word) {
         String [] keywords = { "int", "float", "double", "boolean", "String", "void"};
         for (String keyword : keywords) {
@@ -233,7 +240,7 @@ public class Main {
         }     
         return false;
     }
-
+    // Verifica del sistema operativo su cui viene eseguito il file
     private static void checkOS() {
         String os = System.getProperty("os.name").toLowerCase(); 
 
@@ -252,8 +259,9 @@ public class Main {
         }
 
     }
-
+    // Funzione che invoca il reader per leggere il contenuto della linea d'interesse.
     private static void speak(String word) {
+        // Invocazione Reader MacOS
         if (platform.equals("MacOs")) {
             String[] command = {"say", word};
 
@@ -269,6 +277,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
+        // Invocazione Reader Windows
         else if (platform.equals("Windows")) {
             String command = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -command \"Add-Type -AssemblyName System.Speech;" + 
                              "$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; " + 
@@ -286,6 +295,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
+        // Invocazione Reader Linux
         else {
             String[] command = {"espeak", word}; 
 
