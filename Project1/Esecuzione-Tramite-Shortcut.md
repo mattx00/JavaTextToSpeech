@@ -3,6 +3,16 @@ Può risultare molto agibile a chi non può utilizzare la vista per programmare 
 Per fare ciò, occorrono una serie di pre requisiti. 
 
 ## 1. Utilizzo dell'editor 'Visual Studio Code'
-Scaricare `Visual Studio Code`, l'utilizzo di questo editor è importante perchè mette a disposizione una serie di file di configurazione per le proprie shortcut che andranno a facilitare 
-l'esecuzione del file Reader.
+Scaricare `Visual Studio Code`, l'utilizzo di questo editor è importante perchè mette a disposizione una serie di file di configurazione per le proprie shortcut che andranno a facilitare l'esecuzione del file Reader.
+
+## 2. Installazione di `javac` e `java`
+Occorreranno i relativi strumenti per effettuare la compilazione ed escuzione di un file Java da linea di comando. 
+
+### Ubuntu/Debian (Linux)
+```
+sudo apt update
+sudo apt install openjdk-x-jdk -y
+javac -version
+java -version
+```
 
