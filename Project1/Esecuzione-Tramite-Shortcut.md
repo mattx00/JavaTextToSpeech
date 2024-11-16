@@ -38,5 +38,8 @@ In un nuovo progetto su Visual Studio Code, andare ad aprire la cartella `.vscod
 [settings.json](/Project1/settings.json), [tasks.json](/Project1/tasks.json), [shrtcts.json](/Project1/shrtcts.json) (se non presenti, occorre crearli). Copiare all'interno di questi file il 
 contenuto di quelli presenti in questa directory.
 
+## Automazione mediante file sh o bat 
+Per andare ad automatizzare il processo, i file .json configurati precedentemente andranno ad invocare uno script .sh o .bat (a seconda del sistema operativo). Pertanto occorre andare a creare un file [script_exec.sh](/Project1/script_exec.sh) o [script_exec.bat](/Project1/script_exec.bat) in cui verranno inseriti i comandi eseguiti al click del shortcut.
+
 
 
