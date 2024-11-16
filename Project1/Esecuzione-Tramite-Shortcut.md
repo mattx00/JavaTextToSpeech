@@ -33,3 +33,10 @@ javac -version
 java -version
 ```
 
+## Configurazione dei file .json
+In un nuovo progetto su Visual Studio Code, andare ad aprire la cartella `.vscode`. All'interno, vi saranno presenti 3 file:
+[settings.json](/), [tasks.json](/), [shrtcts.json](/) (se non presenti, occorre crearli). Copiare all'interno di questi file il 
+contenuto di quelli presenti in questa directory.
+
+
+
