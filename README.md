@@ -35,4 +35,18 @@ Infatti, la libreria per il TextToSpeech ad ogni invocazione necessita di un ini
 Pertanto, se si vuole utilizzare questo progetto, occorre elaborare un architettura che tenga conto di quest'aspetto, come ad esempio un sistema client-server dove la libreria viene avviata una singola volta sul server e resta disponibile a risolvere un certo numero di richieste da parte del client, oppure utilizzare un sistema di thread. 
 Il codice è disponibile in [Main.py](/Project2/Main.py)
 
+## Opzione 3
+L'ultima opzione può essere uno spunto interessante rispetto al problema di riuscire a copire tutti i costrutti dell'intero linguaggio. 
+É presente al link `https://github.com/antlr/grammars-v4/tree/master/java/java20` del codice relativo ad un Lexer e ad un Parser scritti per Java, utilizzando la grammatica di `antlr`. Una volta installato ANTLR sul proprio sistema ed aver eseguito i comandi: 
+```
+antlr4 Java20Lexer.g4
+antlr4 Java20Parser.g4
+```
+Verranno generati una serie di file `.java` che vanno ad implementare tutta la struttura sintattica e semantica del linguaggio. 
+In particolare, nel file `Java20Parser.java`, vi sono presente delle funzioni, come `makeRuleNames`, `makeLiteralNames` che vanno ad elaborare l'output che si deve produrre in corrispondenza di un certo costrutto. 
+Questi file garantiscono di non tralasciare alcun costrutto del linguaggio, inoltre possiedono già la logica necessaria per andare ad evidenziare le specifiche parole chiavi di quest ultimo. Il principale lavoro in questo caso è andare a modificare tutti gli output in modo che risultino maggiormente comprensibili ad utenti ipovedenti.
+
+
+
+
 
