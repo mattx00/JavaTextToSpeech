@@ -1,0 +1,7 @@
+[
+    {
+       "key": "ctrl+k",
+       "command": "workbench.action.tasks.runTask",
+       "args": "Esegui Reader con numero di riga"
+    }
+]
