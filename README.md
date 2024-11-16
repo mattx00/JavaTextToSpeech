@@ -16,4 +16,4 @@ Con enfasi si intende che, utilizzando segni di punteggiatura, spazi, lettere ma
 
 ### Possibili miglioramenti 
 Vi sono alcuni aspetti che richiedono sviluppo all'interno del codice: 
-  - Le letture possono dipendere dal contesto: il Reader deve riuscire a diversificare la lettura se si trova di fronte a questi 3 scenari: `int a = 3;` `"int a  = 3;"` `//int a = 3;`
+  - /textbf{Le letture possono dipendere dal contesto}: il Reader deve riuscire a diversificare la lettura se si trova di fronte a questi 3 scenari: `int a = 3;` `"int a  = 3;"` `//int a = 3;`; 
