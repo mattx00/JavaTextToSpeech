@@ -35,8 +35,8 @@ java -version
 
 ## Configurazione dei file .json
 In un nuovo progetto su Visual Studio Code, andare ad aprire la cartella `.vscode`. All'interno, vi saranno presenti 3 file:
-[settings.json](/Project1/settings.json), [tasks.json](/Project1/tasks.json), [shrtcts.json](/Project1/shrtcts.json) (se non presenti, occorre crearli). Copiare all'interno di questi file il 
-contenuto di quelli presenti in questa directory.
+[settings.json](/Project1/settings.json), [tasks.json](/Project1/tasks.json), [shrtcts.json](/Project1/shrtcts.json) (se non presenti, occorre crearli). Copiare all'interno di questi file il contenuto di quelli presenti in questa directory.
+Infine, cercare mediante la barra di ricerca il file [keybindings.json](/Project1/keybindings.json), copiare anche in quest'ultimo il contenuto del file presente in questa directory.
 
 ## Automazione mediante file sh o bat 
 Per andare ad automatizzare il processo, i file .json configurati precedentemente andranno ad invocare uno script .sh o .bat (a seconda del sistema operativo). Pertanto occorre andare a creare un file [script_exec.sh](/Project1/script_exec.sh) o [script_exec.bat](/Project1/script_exec.bat) in cui verranno inseriti i comandi eseguiti al click del shortcut.
