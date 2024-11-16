@@ -8,3 +8,6 @@ Dopo ciò, il programma andrà a rilevare su quale sistema operativo sta venendo
 Estratta la riga, verranno analizzate tutte le parole presenti. Se una parola è una keyword del lingaggio Java, ne si andrà ad enfatizzare la lettura. 
 Con enfasi si intende che, utilizzando segni di punteggiatura, spazi, lettere maiuscole, si possono ottenere letture differenti da parte del Reader, in particolare si riescono ad inserire delle pause che aiutano alla comprensione del contenuto rispetto ad una lettura monotona e senza stop. 
 
+### Vantaggi
+  -  
+
