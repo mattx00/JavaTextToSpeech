@@ -16,3 +16,20 @@ javac -version
 java -version
 ```
 
+### MacOS 
+```
+brew install openjdk@x
+sudo ln -sfn $(brew --prefix openjdk@x)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+export PATH="/usr/local/opt/openjdk@x/bin:$PATH"
+javac -version
+java -version
+```
+
+
+### Windows 
+Occorre installare il jdk dal sito Oracle, seguendo tutte le istruzioni a schermo.
+```
+javac -version
+java -version
+```
+
