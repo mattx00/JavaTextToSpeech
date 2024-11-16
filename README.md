@@ -9,5 +9,11 @@ Estratta la riga, verranno analizzate tutte le parole presenti. Se una parola è
 Con enfasi si intende che, utilizzando segni di punteggiatura, spazi, lettere maiuscole, si possono ottenere letture differenti da parte del Reader, in particolare si riescono ad inserire delle pause che aiutano alla comprensione del contenuto rispetto ad una lettura monotona e senza stop. 
 
 ### Vantaggi
-  -  
+  -  Costruire per ogni specifico costrutto un'enfasi associata (quali segni di punteggiatura leggere, come leggere una certa parola, analizzarne il contesto).
+  -  Letture rapide (l'invocazione di letture ripetute su righe differenti non ha grandi valori di delay).
+  -  Adattabile a molte piattaforme (tutte quelle che possiedono uno screen reader di default).
+  -  Approccio indipendente dal linguaggio (il codice è scritto in Java, ma questo non è un vincolo al funzionamento). 
 
+### Possibili miglioramenti 
+Vi sono alcuni aspetti che richiedono sviluppo all'interno del codice: 
+  - Le letture possono dipendere dal contesto: il Reader deve riuscire a diversificare la lettura se si trova di fronte a questi 3 scenari: `int a = 3;` `"int a  = 3;"` `//int a = 3;`
