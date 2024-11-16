@@ -16,4 +16,5 @@ Con enfasi si intende che, utilizzando segni di punteggiatura, spazi, lettere ma
 
 ### Possibili miglioramenti 
 Vi sono alcuni aspetti che richiedono sviluppo all'interno del codice: 
-  - /textbf{Le letture possono dipendere dal contesto}: il Reader deve riuscire a diversificare la lettura se si trova di fronte a questi 3 scenari: `int a = 3;` `"int a  = 3;"` `//int a = 3;`; 
+  - Le letture possono dipendere dal contesto: il Reader deve riuscire a diversificare la lettura se si trova di fronte, ad esempio, a questi 3 scenari: `int a = 3;` `"int a  = 3;"` `//int a = 3;`; Analizzare tutti i contesti in cui un utente si può imbattere programmando e farli riconoscere a qualcuno che non può utilizzare la vista.
+  - Vocabolario di tutte le keyword del linguaggio: occorre cercare per ogni singola parola del linguaggio Java il miglior modo in cui essa possa venire enfatizzata. Considerando un'implementazione che ne favorisca la chiarezza, la comprensione. Alcuni screen reader se impostati sulla lingua italiana tendono a leggere le parole inglesi senza badare alla pronuncia, occorrono dei metodi per aggirare il problema (`private` potrebbe diventare `praivat`).
