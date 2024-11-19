@@ -1,6 +1,9 @@
-$file = $args[0]
-$lineNumber = $args[1]
+@echo off
+:: Assegna i parametri passati a variabili leggibili
 
-javac Main.java
+set file=%1
+set /a lineNumber=%2-1
 
-java Main "$file_name" "$line_number"
+javac Main.java 
+
+java Main "%file%" "%lineNumber%"
