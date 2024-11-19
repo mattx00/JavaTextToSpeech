@@ -277,12 +277,15 @@ public class Main {
         }
         // Invocazione Reader Windows
         else if (platform.equals("Windows")) {
-            String command = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -command \"Add-Type -AssemblyName System.Speech;" + 
+            String command = "Add-Type -AssemblyName System.Speech; " + 
                              "$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; " + 
-                             "$speak.Speak('" + word + "');\"";
+                             "$speak.Speak('" + word.replace("'", "''") + "');";
 
             try {
-                Process process = Runtime.getRuntime().exec(command);
+                ProcessBuilder processBuilder = new ProcessBuilder(); 
+                processBuilder.command("powershell.exe", "-Command", command); 
+                Process process = processBuilder.start();
+                
                 BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
                 String line; 
                 while ((line = reader.readLine()) != null) {
