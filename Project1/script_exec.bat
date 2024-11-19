@@ -7,3 +7,5 @@ set /a lineNumber=%2-1
 javac Main.java 
 
 java Main "%file%" "%lineNumber%"
+
+pause
