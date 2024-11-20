@@ -9,6 +9,9 @@
                 "${file}", 
                 "${lineNumber}"
             ],
+            "options": {
+                "cwd": "src"    
+            },
             "problemMatcher": [],
             "group": {
                 "kind": "build",
